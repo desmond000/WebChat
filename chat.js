@@ -10,6 +10,7 @@ function login(form) {
 	phone.receive(function(session){
 	    session.connected(function(session) { video_out.appendChild(session.video); });
 	    session.ended(function(session) { video_out.innerHTML='&nbsp;'; });
+		$('#display-div').append(session.video);
 	});
 	return false; 	// stop form from submitting XD
 }
